@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroCapture Studios | Cobertura Cinematográfica con Dron Lito 1 - Campeche</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .neon-border {
+      box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.4);
+    }
+    .carousel-container {
+      perspective: 1000px;
+      position: relative;
+      height: 520px;
+    }
+    .carousel-card {
+      position: absolute;
+      width: 100%;
+      max-width: 440px;
+      left: 50%;
+      top: 0;
+      transform-origin: center center;
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+      cursor: grab;
+    }
+    .carousel-card:active { cursor: grabbing; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950">
+
+  <!-- Navegación -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-800/80 px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-cyan-500/20">
+        <i class="fa-solid fa-drone"></i>
+      </div>
+      <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-cyan-400 bg-clip-text text-transparent">
+        AeroCapture <span class="text-cyan-400 font-extrabold">CAMPECHE</span>
+      </span>
+    </div>
+    
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+      <a href="#galeria" class="hover:text-cyan-400 transition-colors">Portafolio Campeche</a>
+      <a href="#simulador" class="hover:text-cyan-400 transition-colors">Simulador m²</a>
+      <a href="#lito1" class="hover:text-cyan-400 transition-colors">Dron Lito 1</a>
+      <a href="#cotizador" class="hover:text-cyan-400 transition-colors">Cotizador En Vivo</a>
+      <a href="#paquetes" class="hover:text-cyan-400 transition-colors">Paquetes (-50%)</a>
+    </div>
+
+    <a href="https://wa.me/529842634959?text=Hola%20AeroCapture%20Campeche,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20para%20un%20evento." target="_blank" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold px-5 py-2.5 rounded-full text-sm shadow-lg shadow-cyan-500/25 transition-all transform hover:scale-105 flex items-center gap-2">
+      <i class="fa-brands fa-whatsapp text-lg"></i>
+      <span>984 263 49 59</span>
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-36 pb-20 px-6 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(6,182,212,0.25),rgba(255,255,255,0))]"></div>
+    <div class="max-w-6xl mx-auto text-center relative z-10">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-6">
+        <i class="fa-solid fa-location-dot"></i> Cobertura en Campeche y Península
+      </span>
+      <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+        Grabación Cinematográfica de Eventos con <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 bg-clip-text text-transparent">Dron Lito 1</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+        Capturamos la majestuosidad de tus eventos en Campeche con perspectiva aérea 4K HDR y máxima estabilidad.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#cotizador" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-8 py-4 rounded-2xl shadow-xl shadow-cyan-500/20 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 text-base">
+          <i class="fa-solid fa-calculator"></i> Cotizar Mi Evento
+        </a>
+        <a href="https://wa.me/529842634959?text=Hola!%20Quiero%20consultar%20disponibilidad%20de%20fechas%20en%20Campeche." target="_blank" class="glass-card hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-2xl border border-slate-700 transition-all flex items-center justify-center gap-3 text-base">
+          <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i> WhatsApp Directo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slider 3D con tus Fotos Reales -->
+  <section id="galeria" class="py-20 px-6 bg-slate-900/50">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Muestras de Trabajo Real</h2>
+      <p class="text-slate-400">Trazos aéreos capturados en alta definición en Campeche con nuestro Dron Lito 1.</p>
+    </div>
+
+    <div class="max-w-xl mx-auto">
+      <div class="carousel-container flex items-center justify-center" id="carousel3d">
+        
+        <!-- Tarjeta 1: Plaza Cenital Nocturna -->
+        <div class="carousel-card glass-card rounded-3xl overflow-hidden shadow-2xl p-4 border border-slate-700" data-index="0">
+          <img src="foto1.jpeg" class="w-full h-72 object-cover rounded-2xl mb-4 pointer-events-none" alt="Vista Aérea Cenital Plaza">
+          <div class="p-2">
+            <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">Vista Cenital Nocturna</span>
+            <h3 class="text-xl font-bold text-white mt-1">Plazas y Espacios Públicos</h3>
+            <p class="text-xs text-slate-400 mt-1">Tomas cenitales perimetrales con nitidez en baja luz.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Catedral Histórica -->
+        <div class="carousel-card glass-card rounded-3xl overflow-hidden shadow-2xl p-4 border border-slate-700" data-index="1">
+          <img src="foto5.jpeg" class="w-full h-72 object-cover rounded-2xl mb-4 pointer-events-none" alt="Catedral de Campeche">
+          <div class="p-2">
+            <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Arquitectura & Eventos</span>
+            <h3 class="text-xl font-bold text-white mt-1">Catedrales y Fachadas</h3>
+            <p class="text-xs text-slate-400 mt-1">Enfoque cinematográfico frontal para bodas y celebraciones.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Costa y Palapas -->
+        <div class="carousel-card glass-card rounded-3xl overflow-hidden shadow-2xl p-4 border border-slate-700" data-index="2">
+          <img src="foto2.jpeg" class="w-full h-72 object-cover rounded-2xl mb-4 pointer-events-none" alt="Costa Aérea">
+          <div class="p-2">
+            <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Costa & Naturaleza</span>
+            <h3 class="text-xl font-bold text-white mt-1">Playas y Eventos Costeros</h3>
+            <p class="text-xs text-slate-400 mt-1">Cobertura de zonas playeras con estabilidad garantizada.</p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4: Atardecer Costa -->
+        <div class="carousel-card glass-card rounded-3xl overflow-hidden shadow-2xl p-4 border border-slate-700" data-index="3">
+          <img src="foto6.jpeg" class="w-full h-72 object-cover rounded-2xl mb-4 pointer-events-none" alt="Atardecer en la Costa">
+          <div class="p-2">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Atardeceres Únicos</span>
+            <h3 class="text-xl font-bold text-white mt-1">Tomas al Atardecer</h3>
+            <p class="text-xs text-slate-400 mt-1">Captura de dorados y contraluces con rango dinámico HDR.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controles Manuales -->
+      <div class="flex justify-center items-center gap-6 mt-8">
+        <button id="prevBtn" class="w-12 h-12 rounded-full glass-card hover:bg-cyan-500 hover:text-slate-950 flex items-center justify-center text-xl transition-all border border-slate-700">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <span class="text-xs text-slate-500 font-mono" id="carouselIndicator">1 / 4</span>
+        <button id="nextBtn" class="w-12 h-12 rounded-full glass-card hover:bg-cyan-500 hover:text-slate-950 flex items-center justify-center text-xl transition-all border border-slate-700">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Simulador de Cobertura en m² -->
+  <section id="simulador" class="py-20 px-6 max-w-5xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="text-cyan-400 font-bold text-sm tracking-wider uppercase">Herramienta Interactiva</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold mt-2 mb-4">Simulador de Cobertura en m²</h2>
+      <p class="text-slate-400">Ajusta la altitud de vuelo para calcular el área exacta que cubrirá el Lito 1 en tu evento.</p>
+    </div>
+
+    <div class="glass-card p-6 md:p-8 rounded-3xl border border-slate-700 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <div class="mb-6">
+          <div class="flex justify-between text-sm font-bold text-slate-300 mb-2">
+            <span>Altitud de Vuelo del Lito 1:</span>
+            <span id="altLabel" class="text-cyan-400">40 Metros</span>
+          </div>
+          <input type="range" id="altRange" min="10" max="120" value="40" oninput="updateSim()" class="w-full accent-cyan-400 cursor-pointer">
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800">
+            <span class="text-xs text-slate-400 font-semibold uppercase">Superficie Cubierta Proyectada</span>
+            <div class="text-3xl font-extrabold text-cyan-400 mt-1" id="areaValue">2,560 m²</div>
+          </div>
+          <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800">
+            <span class="text-xs text-slate-400 font-semibold uppercase">Dimensiones del Cuadro de Video</span>
+            <div class="text-lg font-bold text-white mt-1" id="dimValue">53.3m x 48.0m</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Canvas Visualizador -->
+      <div class="flex flex-col items-center justify-center">
+        <canvas id="simCanvas" width="320" height="240" class="bg-slate-950 rounded-2xl border border-slate-800 w-full max-w-xs shadow-inner"></canvas>
+        <p class="text-xs text-slate-500 mt-3 text-center">Representación gráfica de escala de ángulo de visión Lito 1</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Especificaciones Dron Lito 1 (Sin imágenes erróneas) -->
+  <section id="lito1" class="py-20 px-6 max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-cyan-400 font-bold text-sm tracking-wider uppercase">Especificaciones del Equipo</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold mt-2">Tecnología Dron Lito 1</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="glass-card p-6 rounded-2xl border border-slate-800 text-center">
+        <i class="fa-solid fa-video text-3xl text-cyan-400 mb-3"></i>
+        <h4 class="font-bold text-white text-lg">Video 4K HDR</h4>
+        <p class="text-xs text-slate-400 mt-2">60 FPS con perfil Log de alto rango dinámico para eventos nocturnos o soleados.</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl border border-slate-800 text-center">
+        <i class="fa-solid fa-wind text-3xl text-cyan-400 mb-3"></i>
+        <h4 class="font-bold text-white text-lg">Resistencia a Vientos</h4>
+        <p class="text-xs text-slate-400 mt-2">Vuelo totalmente estable en la maleza y costas de Campeche.</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl border border-slate-800 text-center">
+        <i class="fa-solid fa-shield-halved text-3xl text-cyan-400 mb-3"></i>
+        <h4 class="font-bold text-white text-lg">Sensores Anti-Colisión</h4>
+        <p class="text-xs text-slate-400 mt-2">Detección omnidireccional para operar de forma segura cerca de estructuras.</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl border border-slate-800 text-center">
+        <i class="fa-solid fa-battery-full text-3xl text-cyan-400 mb-3"></i>
+        <h4 class="font-bold text-white text-lg">Autonomía Continua</h4>
+        <p class="text-xs text-slate-400 mt-2">Sistema de baterías inteligentes interconectadas para cobertura ininterrumpida.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cotizador Interactivo En Vivo -->
+  <section id="cotizador" class="py-20 px-6 bg-slate-900/60 border-y border-slate-800">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Cotizador Interactivo de Evento</h2>
+        <p class="text-slate-400">Calcula al instante el costo proyectado con nuestros precios al 50% de descuento en Pesos Mexicanos ($ MXN).</p>
+      </div>
+
+      <div class="glass-card p-6 md:p-10 rounded-3xl border border-slate-700 shadow-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          
+          <!-- Tipo de Evento -->
+          <div>
+            <label class="block text-sm font-bold text-slate-300 mb-3">1. Tipo de Evento</label>
+            <select id="calcType" onchange="calculateQuote()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400">
+              <option value="1500">Boda / Social ($1,500 MXN base)</option>
+              <option value="2000">Festival / Concierto ($2,000 MXN base)</option>
+              <option value="1500">Deporte / Acción ($1,500 MXN base)</option>
+              <option value="2500">Corporativo / Institucional ($2,500 MXN base)</option>
+            </select>
+          </div>
+
+          <!-- Horas de Vuelo -->
+          <div>
+            <div class="flex justify-between text-sm font-bold text-slate-300 mb-3">
+              <span>2. Horas de Cobertura:</span>
+              <span id="calcHoursLabel" class="text-cyan-400">2 Horas</span>
+            </div>
+            <input type="range" id="calcHours" min="1" max="10" value="2" oninput="calculateQuote()" class="w-full accent-cyan-400 cursor-pointer">
+            <p class="text-xs text-slate-500 mt-2">+ $350 MXN por hora adicional</p>
+          </div>
+        </div>
+
+        <!-- Opciones Adicionales -->
+        <div class="mb-8">
+          <label class="block text-sm font-bold text-slate-300 mb-3">3. Servicios Adicionales</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <label class="flex items-center gap-3 p-3 bg-slate-950/60 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700">
+              <input type="checkbox" id="extEdit" onchange="calculateQuote()" class="w-5 h-5 accent-cyan-400">
+              <span class="text-sm text-slate-300">Edición de Video Cine 4K (+$500 MXN)</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 bg-slate-950/60 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700">
+              <input type="checkbox" id="extStream" onchange="calculateQuote()" class="w-5 h-5 accent-cyan-400">
+              <span class="text-sm text-slate-300">Live Streaming 1080p (+$1,550 MXN)</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 bg-slate-950/60 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700">
+              <input type="checkbox" id="extFpv" onchange="calculateQuote()" class="w-5 h-5 accent-cyan-400">
+              <span class="text-sm text-slate-300">Tomas Inmersivas FPV (+$1,000 MXN)</span>
+            </label>
+            <label class="flex items-center gap-3 p-3 bg-slate-950/60 rounded-xl border border-slate-800 cursor-pointer hover:border-slate-700">
+              <input type="checkbox" id="extPermits" onchange="calculateQuote()" class="w-5 h-5 accent-cyan-400">
+              <span class="text-sm text-slate-300">Permisos de Zona Especial (+$1,500 MXN)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Total y Envío Directo a WhatsApp -->
+        <div class="pt-6 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold block">Total Estimado (MXN)</span>
+            <div class="text-4xl font-extrabold text-cyan-400" id="calcTotal">$2,500 MXN</div>
+            <span class="text-xs text-emerald-400">✓ Con 50% de descuento aplicado</span>
+          </div>
+
+          <button onclick="sendQuoteToWhatsApp()" class="w-full md:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-8 py-4 rounded-2xl shadow-lg shadow-emerald-500/20 transition-all flex items-center justify-center gap-3 text-base">
+            <i class="fa-brands fa-whatsapp text-2xl"></i> Enviar Cotización a WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paquetes con 50% de Descuento -->
+  <section id="paquetes" class="py-20 px-6 max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Paquetes Populares en Campeche</h2>
+      <p class="text-slate-400">Tarifas fijas promocionales en Pesos Mexicanos con Dron Lito 1.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Paquete Básico -->
+      <div class="glass-card rounded-3xl p-8 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition-all">
+        <div>
+          <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase">Básico</span>
+          <h3 class="text-2xl font-bold text-white mt-1 mb-4">Cobertura Express</h3>
+          <div class="mb-6">
+            <span class="text-slate-500 line-through text-sm">$4,500 MXN</span>
+            <div class="text-4xl font-extrabold text-white">$2,000 <span class="text-base font-normal text-slate-400">MXN</span></div>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-300 mb-8">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> 2 Horas de Cobertura con Lito 1</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Video Raw 4K Bruto entregado</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> 1 Piloto Certificado</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Entrega digital rápida</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/529842634959?text=Hola!%20Me%20interesa%20contratar%20el%20Paquete%20B%C3%A1sico%20de%20$2,000%20MXN%20en%20Campeche" target="_blank" class="w-full py-3.5 rounded-xl border border-cyan-500/40 text-cyan-400 hover:bg-cyan-500 hover:text-slate-950 font-bold text-center transition-all flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp"></i> Reservar Básico
+        </a>
+      </div>
+
+      <!-- Paquete Pro -->
+      <div class="glass-card rounded-3xl p-8 border-2 border-cyan-500 relative flex flex-col justify-between neon-border transform md:-translate-y-4">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-cyan-500 text-slate-950 text-xs font-extrabold px-4 py-1 rounded-full uppercase tracking-wider">
+          MÁS SOLICITADO
+        </span>
+        <div>
+          <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase">Profesional</span>
+          <h3 class="text-2xl font-bold text-white mt-1 mb-4">Cobertura Pro Evento</h3>
+          <div class="mb-6">
+            <span class="text-slate-500 line-through text-sm">$11,700 MXN</span>
+            <div class="text-4xl font-extrabold text-cyan-400">$4,500 <span class="text-base font-normal text-slate-400">MXN</span></div>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-300 mb-8">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> 5 Horas de Cobertura con Lito 1</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Video Highlight Editado (3 min)</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> 20 Fotografías Aéreas Retocadas</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Permisos y licencias de vuelo</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/529842634959?text=Hola!%20Me%20interesa%20contratar%20el%20Paquete%20Pro%20de%20$4,500%20MXN%20en%20Campeche" target="_blank" class="w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-center shadow-lg shadow-cyan-500/30 transition-all flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp"></i> Reservar Paquete Pro
+        </a>
+      </div>
+
+      <!-- Paquete Premium -->
+      <div class="glass-card rounded-3xl p-8 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition-all">
+        <div>
+          <span class="text-xs font-bold text-purple-400 tracking-wider uppercase">Cine & Premium</span>
+          <h3 class="text-2xl font-bold text-white mt-1 mb-4">Producción Completa</h3>
+          <div class="mb-6">
+            <span class="text-slate-500 line-through text-sm">$23,400 MXN</span>
+            <div class="text-4xl font-extrabold text-white">$10,000 <span class="text-base font-normal text-slate-400">MXN</span></div>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-300 mb-8">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Cobertura Todo el Día (hasta 10 hrs)</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Video Cinematográfico 4K + FPV</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Transmisión en Vivo a Pantallas</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Entrega en Disco SSD Personalizado</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/529842634959?text=Hola!%20Me%20interesa%20contratar%20el%20Paquete%20Premium%20de%20$10,000%20MXN%20en%20Campeche" target="_blank" class="w-full py-3.5 rounded-xl border border-purple-500/40 text-purple-400 hover:bg-purple-500 hover:text-white font-bold text-center transition-all flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp"></i> Reservar Premium
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 bg-slate-950 border-t border-slate-800 text-center text-slate-500 text-sm">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-cyan-500 text-slate-950 font-extrabold flex items-center justify-center text-sm">
+          <i class="fa-solid fa-drone"></i>
+        </div>
+        <span class="font-bold text-white">AeroCapture Studios Campeche</span>
+      </div>
+      <p>© 2026 AeroCapture Studios. Operaciones con Dron Lito 1. WhatsApp: <strong class="text-slate-300">984 263 49 59</strong></p>
+    </div>
+  </footer>
+
+  <!-- Botón Flotante de WhatsApp Directo -->
+  <a href="https://wa.me/529842634959?text=Hola!%20Tengo%20una%20consulta%20sobre%20tus%20servicios%20de%20dron%20en%20Campeche." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-400 text-slate-950 p-4 rounded-full shadow-2xl shadow-emerald-500/40 transition-all transform hover:scale-110 flex items-center justify-center">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+  </a>
+
+  <!-- Script Lógico -->
+  <script>
+    // --- LÓGICA DEL CARRUSEL 3D CON TUS FOTOS ---
+    let currentIndex = 0;
+    const cards = document.querySelectorAll('.carousel-card');
+    const totalCards = cards.length;
+    const indicator = document.getElementById('carouselIndicator');
+
+    function updateCarousel() {
+      cards.forEach((card, index) => {
+        const offset = (index - currentIndex + totalCards) % totalCards;
+        
+        if (offset === 0) {
+          card.style.transform = 'translateX(-50%) translateZ(0px) scale(1)';
+          card.style.zIndex = '30';
+          card.style.opacity = '1';
+        } else if (offset === 1) {
+          card.style.transform = 'translateX(-10%) translateZ(-150px) scale(0.85) rotateY(-15deg)';
+          card.style.zIndex = '20';
+          card.style.opacity = '0.6';
+        } else if (offset === totalCards - 1) {
+          card.style.transform = 'translateX(-90%) translateZ(-150px) scale(0.85) rotateY(15deg)';
+          card.style.zIndex = '10';
+          card.style.opacity = '0.6';
+        } else {
+          card.style.transform = 'translateX(-50%) translateZ(-300px) scale(0.7)';
+          card.style.zIndex = '0';
+          card.style.opacity = '0';
+        }
+      });
+      if(indicator) indicator.innerText = `${currentIndex + 1} / ${totalCards}`;
+    }
+
+    document.getElementById('nextBtn')?.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalCards;
+      updateCarousel();
+    });
+
+    document.getElementById('prevBtn')?.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      updateCarousel();
+    });
+
+    updateCarousel();
+
+    // --- LÓGICA DEL SIMULADOR DE COBERTURA (m²) ---
+    function updateSim() {
+      const alt = parseInt(document.getElementById('altRange').value);
+      document.getElementById('altLabel').innerText = `${alt} Metros`;
+
+      const width = (alt * 1.333).toFixed(1);
+      const height = (alt * 1.2).toFixed(1);
+      const area = Math.round(width * height);
+
+      document.getElementById('areaValue').innerText = `${area.toLocaleString('es-MX')} m²`;
+      document.getElementById('dimValue').innerText = `${width}m x ${height}m`;
+
+      const canvas = document.getElementById('simCanvas');
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Cono de Visión Dron
+        ctx.fillStyle = 'rgba(6, 182, 212, 0.15)';
+        ctx.strokeStyle = '#06b6d4';
+        ctx.lineWidth = 2;
+
+        ctx.beginPath();
+        ctx.moveTo(160, 30);
+        const boxW = Math.min(260, 40 + (alt * 1.8));
+        const boxH = Math.min(140, 20 + (alt * 0.9));
+        ctx.lineTo(160 - boxW/2, 190);
+        ctx.lineTo(160 + boxW/2, 190);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        // Dron Icon Base
+        ctx.fillStyle = '#38bdf8';
+        ctx.beginPath();
+        ctx.arc(160, 30, 8, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Cuadro de Cobertura Terrestre
+        ctx.strokeStyle = '#22c55e';
+        ctx.strokeRect(160 - boxW/2, 190 - boxH/4, boxW, boxH/2);
+      }
+    }
+
+    updateSim();
+
+    // --- LÓGICA DEL COTIZADOR ---
+    function calculateQuote() {
+      const basePrice = parseInt(document.getElementById('calcType').value);
+      const hours = parseInt(document.getElementById('calcHours').value);
+      document.getElementById('calcHoursLabel').innerText = `${hours} Hora${hours > 1 ? 's' : ''}`;
+
+      const extraHoursCost = (hours - 1) * 350;
+      const editCost = document.getElementById('extEdit').checked ? 500 : 0;
+      const streamCost = document.getElementById('extStream').checked ? 1550 : 0;
+      const fpvCost = document.getElementById('extFpv').checked ? 1000 : 0;
+      const permitsCost = document.getElementById('extPermits').checked ? 1500 : 0;
+
+      const grandTotal = basePrice + extraHoursCost + editCost + streamCost + fpvCost + permitsCost;
+
+      document.getElementById('calcTotal').innerText = `$${grandTotal.toLocaleString('es-MX')} MXN`;
+      return { basePrice, hours, grandTotal };
+    }
+
+    function sendQuoteToWhatsApp() {
+      const quote = calculateQuote();
+      const eventSelect = document.getElementById('calcType');
+      const eventName = eventSelect.options[eventSelect.selectedIndex].text;
+
+      let msg = `*COTIZACIÓN EN CAMPECHE - Dron Lito 1*%0A%0A`;
+      msg += `📌 *Tipo de Evento:* ${eventName}%0A`;
+      msg += `⏱️ *Horas de Cobertura:* ${quote.hours} hrs%0A`;
+      msg += `✨ *Servicios Extra:*%0A`;
+      if (document.getElementById('extEdit').checked) msg += ` - Edición Video Cine 4K%0A`;
+      if (document.getElementById('extStream').checked) msg += ` - Live Streaming 1080p%0A`;
+      if (document.getElementById('extFpv').checked) msg += ` - Tomas FPV Inmersivas%0A`;
+      if (document.getElementById('extPermits').checked) msg += ` - Permisos de Zona Especial%0A`;
+      msg += `%0A💰 *Total Estimado con 50% desc:* *$${quote.grandTotal.toLocaleString('es-MX')} MXN*%0A%0A`;
+      msg += `¿Tienen disponibilidad para evento en Campeche?`;
+
+      window.open(`https://wa.me/529842634959?text=${msg}`, '_blank');
+    }
+
+    calculateQuote();
+  </script>
+</body>
+</html>
